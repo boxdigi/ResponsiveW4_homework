@@ -1,6 +1,7 @@
 :root {
     --branding-color: #6c63ff;
     --text-color: #272142;
+    --background-color: #e8e1f8f1;
     --main-font-family: 'Averia Serif Libre', cursive;
     --secondary-font-family: 'Libre Franklin', sans-serif;
 }
@@ -20,14 +21,15 @@ h2 {
 p {
     font-family: var(--secondary-font-family);
     font-weight: normal;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 30px;
+    margin: 45px;
 }
 
 .hero {
-    background: #e8e1f8f1;
+    background: var(--background-color);
     text-align: center;
-    padding: 160px 20px;
+    padding: 100px 20px 50px 20px;
 }
 
 .hero p {
@@ -37,12 +39,35 @@ p {
     color: var(--text-color);
 }
 
-.hero h2 {
+.project-description p,
+.project-description a {
+    margin-left: 0;
+}
+
+.hero h2,
+.about h2 {
     color: var(--text-color);
     line-height: 2;
     font-weight: lighter;
-    font-size: 24px;
     font-family: var(--secondary-font-family);
+    font-size: 24px;
+}
+
+.about,
+#contact {
+    background: var(--background-color);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.bg-custom {
+    background: var(--background-color);
+}
+
+.mail-link {
+    text-decoration: none;
+    font-size: 35px;
+    color: var(--branding-color);
 }
 
 .btn-branding {
@@ -51,7 +76,8 @@ p {
     color: white;
     font-size: 18px;
     line-height: 27px;
-    padding: 15px 30px;
+    padding: 10px 20px;
+    margin: 20px;
 }
 
 .btn-branding-outline {
@@ -61,6 +87,7 @@ p {
     font-size: 18px;
     line-height: 27px;
     padding: 10px 20px;
+    margin: 20px;
 }
 
 @media(min-width:992px) {
@@ -80,8 +107,23 @@ p {
         padding-top: 15px;
     }
 
-    .hero {
-        padding: 60px 20px;
+    #contact h2 {
+        font-size: 35px;
+    }
+
+    #contact {
+        padding: 20px;
+    }
+
+
+    .hero,
+    .about {
+        padding: 60px 20px 20px 20px;
+    }
+
+    .mail-link {
+        font-size: 24px;
+        margin-bottom: 20px;
     }
 }
 
